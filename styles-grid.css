@@ -1,0 +1,94 @@
+/* Reset default margin and padding for all elements */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Apply Grid layout to the entire body */
+  body {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "footer";
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+  }
+  
+  /* Apply styles to header */
+  header {
+    grid-area: header;
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  /* Style company logo in header */
+  header img {
+    vertical-align: middle;
+  }
+  
+  /* Style navigation */
+  nav {
+    grid-area: nav;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin: 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #555;
+  }
+  
+  /* Apply Grid layout to main content section */
+  main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Style each article in main content */
+  article {
+    background-color: #f9f9f9;
+    padding: 10px;
+  }
+  
+  article h1, article h2 {
+    margin-bottom: 10px;
+  }
+  
+  /* Apply Grid layout to footer */
+  footer {
+    grid-area: footer;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  footer div img {
+    vertical-align: middle;
+  }
+  
+  footer small {
+    font-size: 12px;
+  }
+  

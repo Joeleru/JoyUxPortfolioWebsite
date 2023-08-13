@@ -1,0 +1,381 @@
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+/* General --- General design goes here */
+body, h1, h2, h3, h4, h5, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    display: grid;
+    max-width: 1920px;
+    background-color: #ffffff;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 3.052rem;
+    line-height: 1.23;
+    color: #000;
+    text-align: centre;
+    margin-top: 1px;
+    padding-top: 2px;
+    margin-bottom: 10px;
+    align-content: center;
+}
+
+h2 {
+    font-size: 2.441rem;
+
+}
+
+h4 {
+    font-size: 1.563rem;
+    font-weight: 800;
+}
+
+p {
+    line-height: 1.3;
+    font-weight: 400;
+    font-size: large;
+    color: #000;
+    margin-top: 40px;
+    align-content: centre;
+}
+
+/* header --- header design goes here */
+header {
+    display: grid;
+    justify-content: center;
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+
+/* nav --- navigation design goes here */
+.nav-menu {
+    display: grid;
+    list-style: none;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-top: #000000;
+    border-style: solid;
+    border-right: none;
+    border-left: none;
+    border-width: 1px;
+
+}
+
+.nav-menu li {
+   text-align: center;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 21px;
+    color: black;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.nav-menu li a:hover {
+    color: #ffffff;
+    background-color: black;
+    border-style: none;
+}   
+
+/* main --- main design goes here */
+
+/* section 1 --- first section design goes here */
+.advert {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1%;
+    margin-top: 2%;
+}
+
+.text-container {
+    text-overflow: clip;
+    color: #ffffff;
+    position: absolute;
+    text-align: center;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.advert > img {
+    width: 100vw;
+    height: 100vh;
+    margin-left: 0%;
+    margin-right: 0%;
+    opacity:0.3;
+}
+
+.text-container > button {
+    margin-top: 40px;
+    margin-left: 80px;
+    background-color: #000000;
+    color: #ffff;
+    /* border-color: #ffffff;
+    border-style: solid; 
+    border-width: 1px;*/
+    width: 25%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.075);
+}
+
+.text-container > button:hover {
+    background-color: #fff;
+    color: #000000;
+    border-style: none;
+}
+
+/* section 2 --- second section design goes here */
+@media screen and (max-width: 767px) {
+    .features {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "subheader" "necklace" "watch" "ring";
+        gap: 20px;
+        text-align: center;
+        padding-top: 2%;
+        padding-bottom: 2%;;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "subheader subheader" "necklace watch" "ring ring";
+        gap: 20px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .features {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "subheader subheader subheader" "necklace watch ring";
+        gap: 20px;
+        justify-content: center;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-left: 4%;
+        padding-right: 4%;
+        background-color: #fdfdfd;
+        
+    }
+}
+
+#subheader {
+    grid-area: subheader;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+#necklace {
+    grid-area: necklace;
+    text-overflow: clip;
+}
+
+#smalltalk {
+    grid-area: watch;
+    text-overflow: clip;
+}
+
+#Commute {
+    grid-area: ring;
+    text-overflow: clip;
+}
+
+article > img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    padding-bottom: 4%;
+}
+
+article > h4 {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 2%;
+}
+
+article > p {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 4%;
+}
+
+article {
+    padding: 2%;
+    border-radius: 16px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.075);
+    background-color: #ffffff;
+}
+
+article:hover {
+    transform: scale(104%);
+    transition: 1s;
+}
+
+button {
+    height: 48px;
+    text-align: center;
+    background-color: black;
+    color: #ffffff;
+    border-style: none;
+    border-radius: 8px;
+    padding-left: 28px;
+    padding-right: 28px;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 12px;
+    width: 100%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.075);
+}
+
+/* footer --- footer design goes here */
+@media screen and (min-width: 1023px) {
+    .footer {
+        display: grid;
+        background-color: black;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        margin: 0;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .footer {
+        display: grid;
+        background-color: black;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin: 0;
+        padding-left: 28px;
+        padding-right: 28px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #fff;
+    font-size: medium;
+    font-weight: 500;
+    margin-left: 100px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+.copyright {
+    color: #ffffff;
+    text-align: right;
+    padding-right: 5%;
+}
+
+.copyright > p {
+    font-size: 0.8rem;
+}
+
+.footer-logo {
+    text-align: left;
+    padding-left: 8%;
+}
+
+/* Contact Form Styling */
+
+.contact-form {
+    background-color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    margin-left: 30%;
+    margin-right: 20%;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    width: 500px;
+    align-content: center;
+    align-items: center;
+  }
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: semi-bold;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    width: 150px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    margin-left: 35%;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #000875;
+  }
